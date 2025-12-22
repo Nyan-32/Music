@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <script>
+        let namae = prompt("あなたのお名前はなんですか？");
+        alert(namae + "さんですね。");
+        let konomi = confirm("あなたはピアノ曲が聞きたいですか？");
+        
+        if (konomi == true)
+        {
+            alert("あなたはおすすめはバッハです。");
+            location.href="bach.html";
+        }
+        else
+        {
+            alert("ぜひ、ブラームスを聴いてみてください。");
+        }
+        
+        </script>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>音楽家</title>
+</head>
+<body style ="background-color:rgb(164, 240, 179)">
+    <h1>有名な作曲家リスト</h1>
+    <a href="bach.html" >バッハ</a><br>
+    <a href="bach.html" >ブラームス（準備中）</a><br>
+    <a href="bach.html" >モーツァルト（準備中）</a>
+   

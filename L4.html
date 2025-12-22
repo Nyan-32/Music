@@ -1,0 +1,90 @@
+<style> 
+    #dialog1,
+    #dialog2,
+    #dialog3,
+    #dialog4{
+    width: 250px;
+    margin: auto;
+    margin-top: 40vh;
+    padding: 30px 20px;
+    display: none;
+    text-align: center;
+    border: 1px solid #aaa;
+    box-shadow: 2px 2px 4px #888;
+}
+</style> 
+
+<div id="dialog1">
+  <p>クラッシク音楽に興味ありますか？</p>
+  <button id="yes1">はい</button>
+  <button id="no1">いいえ</button>
+ 
+</div>
+
+<div id="dialog2" >
+  <p>ピアノに興味がありますか？</p>
+  <button id="yes2">はい</button>
+  <button id="no2">いいえ</button>
+
+</div>
+
+<div id="dialog3" >
+  <p>交響曲に興味がありますか？</p>
+  <button id="yes3">はい</button>
+  <button id="no3">いいえ</button>
+ 
+</div>
+<div id="dialog4" >
+  <p>幅広いジャンルに興味はありますか？</p>
+  <button id="yes4">はい</button>
+  <button id="no4">いいえ</button>
+ 
+</div>
+
+<button id="startBtn">アンケートをはじめます</button>
+<script>
+const dialog1 = document.getElementById('dialog1');
+const dialog2 = document.getElementById('dialog2');
+const dialog3 = document.getElementById('dialog3');
+const dialog4 = document.getElementById('dialog4');
+const startBtn = document.getElementById('startBtn');
+
+startBtn.addEventListener('click', () => {
+  dialog1.style.display = 'block';
+  startBtn.style.display = 'none';
+});
+
+// 1つ目の質問
+document.getElementById('yes1').addEventListener('click', () => {
+　
+  alert("あなたのおすすめはバッハです。");
+  location.href = 'bach.html'; // 「はい」でページ遷移
+});
+document.getElementById('no1').addEventListener('click', () => {
+  dialog1.style.display = 'none';
+  dialog2.style.display = 'block';
+});
+
+
+// 2つ目の質問
+document.getElementById('yes2').addEventListener('click', () => {
+  alert("あなたのおすすめはベートーベンです。");
+  location.href = 'bet.html'; // 「はい」でページ遷移
+dialog2.style.display = 'none';
+  dialog3.style.display = 'block';
+});
+document.getElementById('no2').addEventListener('click', () => {
+  dialog2.style.display = 'none';
+  dialog3.style.display = 'block';
+});
+
+
+// 3つ目の質問
+document.getElementById('yes3').addEventListener('click', () => {
+  alert('ほにゃらら');
+});
+document.getElementById('no3').addEventListener('click', () => {
+  alert('ほにゃらら');
+});
+
+</script>
